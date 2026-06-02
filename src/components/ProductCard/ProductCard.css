@@ -1,0 +1,34 @@
+.product-card {
+  margin: 10px;
+  border: 1px black solid;
+  border-radius: 10px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-card__title {
+  font-size: medium;
+  margin: 10px auto 0;
+}
+
+.product-card__picture {
+  width: 100%;
+  max-width: 180px;
+  height: 200px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 12px;
+  margin: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  filter: brightness(1.05);
+}
+
+.product-card__picture_cruncy {
+}
+.product-card__picture_creamy {
+  background-image: url("../../assets/creamy_pb.jpeg");
+}
