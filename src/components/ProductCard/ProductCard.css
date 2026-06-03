@@ -27,6 +27,13 @@
   filter: brightness(1.05);
 }
 
+.product-card__input {
+    width: 50px;
+    text-align: center;
+    padding: 5px;
+    font-size: medium;
+}
+
 .product-card__picture_cruncy {
 }
 .product-card__picture_creamy {

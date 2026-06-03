@@ -1,5 +1,9 @@
 .body {
     margin: 50px 0 0 0;
+
+}
+
+.body__products {
     display: flex;
     justify-content: center;
 }

@@ -11,11 +11,13 @@ const tempProductsData = [{
   price: "$10",
   inStock: true,
   imageClass: "product-card__picture_creamy",
+  stockQuantity: 100,
 },{
   name: "Cruncy PB",
   price: "$10",
   inStock: true,
   imageClass: "product-card__picture_cruncy",
+  stockQuantity: 100,
 }]
 
 function App() {
