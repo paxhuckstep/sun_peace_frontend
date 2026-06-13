@@ -7,37 +7,18 @@ import Header from "../Header/Header";
 import Body from "../Body/Body";
 import Footer from "../Footer/Footer";
 import Cart from "../Cart/Cart";
-
-const productsData = [
-  {
-    id: 1,
-    name: "Creamy PB",
-    price: "$10",
-    inStock: true,
-    imageClass: "product-card__picture_creamy",
-    stockQuantity: 100,
-  },
-  {
-    id: 2,
-    name: "Cruncy PB",
-    price: "$10",
-    inStock: true,
-    imageClass: "product-card__picture_cruncy",
-    stockQuantity: 100,
-  },
-];
-
+import { productsData } from "../../constants";
 function App() {
-  const [count, setCount] = useState(0);
-  const [cartData, setCartData] = useState([]);
-
-  const addToCart = (item, quantity) => {
-    setCartData((prev) => {
-      prev.push({
-        product: item,
-        amount: quantity,
-      });
-    });
+  const [creamyCount, setCreamyCount] = useState(0);
+  const [crunchyCount, setCrunchyCount] = useState(0);
+  const addToCart = (productID, quantity) => {
+    if (productID === 1) {
+      setCreamyCount((prev) => prev + quantity);
+    }
+    if (productID === 2) {
+      setCrunchyCount((prev) => prev + quantity);
+    }
+    console.log("add to cart ran");
   };
 
   return (
@@ -48,7 +29,12 @@ function App() {
           path="/"
           element={<Body productsData={productsData} addToCart={addToCart} />}
         />
-        <Route path="cart" element={<Cart cartData={cartData} />} />
+        <Route
+          path="cart"
+          element={
+            <Cart creamyCount={creamyCount} crunchyCount={crunchyCount} />
+          }
+        />
       </Routes>
       <Footer />
     </main>

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./ProductCard.css";
 
-function ProductCard({ productData, index }) {
+function ProductCard({ productData, addToCart, index }) {
   const imageClass = "product-card__picture " + productData.imageClass;
   const [quantity, setQuantity] = useState(0);
 
@@ -10,8 +10,9 @@ function ProductCard({ productData, index }) {
     setQuantity(event.target.value);
   };
 
-  const addToCart = () => {
+  const submitClick = () => {
     console.log("quantity: ", quantity);
+    addToCart(productData.id, quantity);
   };
 
   return (
@@ -27,7 +28,7 @@ function ProductCard({ productData, index }) {
         defaultValue={0}
         onClick={selectorClicked}
       />
-      <button className="product-card__atc" onClick={addToCart}>
+      <button className="product-card__atc" onClick={submitClick}>
         Add to Cart
       </button>
     </li>
