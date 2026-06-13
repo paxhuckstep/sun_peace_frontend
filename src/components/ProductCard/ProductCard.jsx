@@ -6,12 +6,12 @@ function ProductCard({ productData, addToCart, index }) {
   const [quantity, setQuantity] = useState(0);
 
   const selectorClicked = (event) => {
-    console.log("selectorClicked?");
+    // console.log("selectorClicked?");
     setQuantity(event.target.value);
   };
 
   const submitClick = () => {
-    console.log("quantity: ", quantity);
+    // console.log("quantity: ", quantity);
     addToCart(productData.id, quantity);
   };
 

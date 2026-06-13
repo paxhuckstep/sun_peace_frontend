@@ -9,6 +9,7 @@ import Footer from "../Footer/Footer";
 import Cart from "../Cart/Cart";
 import { productsData } from "../../constants";
 function App() {
+
   const [creamyCount, setCreamyCount] = useState(0);
   const [crunchyCount, setCrunchyCount] = useState(0);
   const addToCart = (productID, quantity) => {
