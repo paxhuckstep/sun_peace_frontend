@@ -7,7 +7,8 @@ function Header() {
   return (
     <section className="header">
         <h1 className='header__title'>SunPeace</h1>
-        <NavBar />
+        {/* <NavBar /> */}
+        <button className="header__cart-button">*CART*</button>
     </section>
   )
 }
