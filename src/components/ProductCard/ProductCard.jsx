@@ -19,13 +19,13 @@ function ProductCard({ productData, addToCart, index }) {
     <li className="product-card" key={index}>
       <h3 className="product-card__title">{productData.name}</h3>
       <div className={imageClass}> </div>
-      <p className="product-card__price">{productData.price}</p>
+      <p className="product-card__price">${productData.price.toFixed(2)}</p>
       <input
         type="number"
-        min={0}
+        min={1}
         max={productData.stockQuantity}
         className="product-card__input"
-        defaultValue={0}
+        defaultValue={1}
         onClick={selectorClicked}
       />
       <button className="product-card__atc" onClick={submitClick}>

@@ -4,12 +4,12 @@ import ProductCard from "../ProductCard/ProductCard";
 import { productsData } from "../../constants";
 import CartCard from "../CartCard/CartCard";
 
-function Cart({ creamyCount, crunchyCount, setQuantityToZero }) {
+function Cart({ creamyCount, crunchyCount, editCount }) {
   return (
     <section className="cart">
       <ul className="cart__cards">
-        <CartCard productData={productsData[0]} productCount={creamyCount} setQuantityToZero={setQuantityToZero} />
-        <CartCard productData={productsData[1]} productCount={crunchyCount} setQuantityToZero={setQuantityToZero} />
+        <CartCard productData={productsData[0]} productCount={creamyCount} editCount={editCount} />
+        <CartCard productData={productsData[1]} productCount={crunchyCount} editCount={editCount} />
       </ul>
     </section>
   );

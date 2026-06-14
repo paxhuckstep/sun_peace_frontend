@@ -27,12 +27,14 @@ function App() {
     // console.log("add to cart ran");
   };
 
-  const setQuantityToZero = (productID) => {
+  
+
+  const editCount = (productID, quantity) => {
     if (productID === 1) {
-      setCreamyCount(0);
+      setCreamyCount(quantity);
     }
     if (productID === 2) {
-      setCrunchyCount(0);
+      setCrunchyCount(quantity);
     }
   };
 
@@ -58,7 +60,7 @@ function App() {
             <Cart
               creamyCount={creamyCount}
               crunchyCount={crunchyCount}
-              setQuantityToZero={setQuantityToZero}
+              editCount={editCount}
             />
           }
         />
