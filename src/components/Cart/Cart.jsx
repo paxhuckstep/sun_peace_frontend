@@ -1,10 +1,12 @@
-import { useState } from "react";
+// import { useState } from "react";
 import "./Cart.css";
-import ProductCard from "../ProductCard/ProductCard";
+// import ProductCard from "../ProductCard/ProductCard";
 import { productsData } from "../../constants";
 import CartCard from "../CartCard/CartCard";
+import { useNavigate } from "react-router";
 
 function Cart({ creamyCount, crunchyCount, editCount }) {
+  const navigate = useNavigate();
   if (crunchyCount < 1 && creamyCount < 1) {
     return (
       <section className="cart">
@@ -26,7 +28,14 @@ function Cart({ creamyCount, crunchyCount, editCount }) {
           editCount={editCount}
         />
       </ul>
-      <button className="cart__checkout">Checkout</button>
+      <button
+        onClick={() => {
+          navigate("/pre-checkout");
+        }}
+        className="cart__checkout"
+      >
+        Checkout
+      </button>
     </section>
   );
 }

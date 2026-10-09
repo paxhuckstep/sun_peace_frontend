@@ -7,6 +7,7 @@ import Header from "../Header/Header";
 import Body from "../Body/Body";
 import Footer from "../Footer/Footer";
 import Cart from "../Cart/Cart";
+import PreCheckout from "../PreCheckout/PreCheckout";
 import { productsData } from "../../constants";
 function App() {
   const [creamyCount, setCreamyCount] = useState(0);
@@ -59,6 +60,15 @@ function App() {
               creamyCount={creamyCount}
               crunchyCount={crunchyCount}
               editCount={editCount}
+            />
+          }
+        />
+        <Route
+          path="pre-checkout"
+          element={
+            <PreCheckout
+              creamyCount={creamyCount}
+              crunchyCount={crunchyCount}
             />
           }
         />
