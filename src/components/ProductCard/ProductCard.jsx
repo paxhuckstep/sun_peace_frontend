@@ -3,7 +3,7 @@ import "./ProductCard.css";
 
 function ProductCard({ productData, addToCart, index }) {
   const imageClass = "product-card__picture " + productData.imageClass;
-  const [quantity, setQuantity] = useState(0);
+  const [quantity, setQuantity] = useState(1);
 
   const selectorClicked = (event) => {
     // console.log("selectorClicked?");

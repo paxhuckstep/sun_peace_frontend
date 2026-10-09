@@ -26,6 +26,7 @@ function Cart({ creamyCount, crunchyCount, editCount }) {
           editCount={editCount}
         />
       </ul>
+      <button className="cart__checkout">Checkout</button>
     </section>
   );
 }

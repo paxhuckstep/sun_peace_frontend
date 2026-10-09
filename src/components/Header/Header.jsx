@@ -1,21 +1,25 @@
 import { useState } from "react";
 import "./Header.css";
-import NavBar from "../NavBar/NavBar";
-import { useNavigate } from "react-router";
+import { useNavigate, useLocation } from "react-router";
 
 function Header() {
   const navigate = useNavigate();
+  const location = useLocation();
   return (
     <section className="header">
       <h1 className="header__title">SunPeace</h1>
       {/* <NavBar /> */}
       <button
         onClick={() => {
-          navigate("cart");
+          if (location.pathname === "/cart") {
+            navigate("/");
+          } else {
+            navigate("/cart");
+          }
         }}
         className="header__cart-button"
       >
-        *CART*
+        {location.pathname === "/cart" ? "*HOME*" : "*CART*"}
       </button>
     </section>
   );
